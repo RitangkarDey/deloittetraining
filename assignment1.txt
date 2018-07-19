@@ -1,0 +1,51 @@
+Create a table called Employee with the following Columns  and perform the following operations:-
+------------------------------------------------------------------------------------------------------------
+
+EmployeeID    
+EmployeeName   
+EmployeeAddress : 
+DOB
+DOJ
+Salary
+
+
+a.) Insert five records
+
+b) Retrieve all the records
+
+
+c) Retrieve the Employee name whose salary is greater than 20000
+
+d) Retrieve the Employee name whose address contains 'a' or 'p' or 'r'  as the last character
+ 
+e) Increase the Salary of all the Employee by 20%
+
+f) Delete all the employee records whose salary is less than 5000
+
+
+Create table Employee
+(
+EmployeeID varchar(10) primary key,
+EmployeeName varchar(20),
+EmployeeAddress varchar(20),
+DOB date,
+DOJ date,
+Salary number(10)
+);
+
+a)
+insert into Employee values('1','Tintin','Bangalore',date'1995-12-04',date'2018-07-16',50000);
+insert into Employee values('2','Nitin','Kolkata',date'1997-11-06',date'2018-07-13',40000);
+insert into Employee values('3','Ria','Mumbai',date'1998-09-03',date'2018-06-14',4000);
+insert into Employee values('4','Chiku','Vellore',date'1994-05-08',date'2018-05-19',18000);
+insert into Employee values('5','Raja','Andhra',date'1994-11-14',date'2018-06-13',31000);
+
+b) Select* from Employee;
+
+c) Select EmployeeName from Employee where Salary>20000;
+
+d) Select EmployeeName from Employee where EmployeeAddress like '%a' or EmployeeAddress like '%p' or EmployeeAddress like '%r';
+
+e) update Employee set salary=salary*1.2;
+
+f) delete from employee where salary<5000;

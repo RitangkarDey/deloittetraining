@@ -1,0 +1,52 @@
+create table Student_N
+( 
+sid char(6),  
+sname varchar(20),
+dob date,
+doj date
+);
+insert into Student_N values(1,'Taniya',date'1995-10-05',date'2017-11-06');
+insert into Student_N values(2,'Raj',date'1998-12-09',date'2016-10-05');
+insert into Student_N values(3,'Ravi',date'1996-09-01',date'2018-07-25');
+select Months_between(DOJ,DOB) from Student_N;
+
+
+select last_day('09-Jan-2018') from dual;
+
+select months_Between(date'2018-07-16',date'1995-12-04')/12 from dual;
+
+create table Student_t
+(
+roll varchar(20),
+name varchar(20),
+address varchar(20),
+marks number
+);
+insert into Student_t values('1','taifal','chennai',null);
+insert into Student_t values('2','amit','chennai',null);
+insert into Student_t values('2','Turan','chennai',98);
+
+select nvl(marks,0) from student_t;
+select nvl2(marks, roll * 3, roll * 5) from student_t;
+update student_t set address='mumbai' where roll in(3,4);
+select address,sum(marks) from student_t group by address having address='mumbai';
+
+create table student_P
+(
+roll varchar(10) primary key,
+Name varchar(20) not null,
+Address varchar(20) check(address in ('Chennai','Mumbai','Kolkata')),
+marks number check(marks between 0 and 100)
+);
+
+insert into Student_P values('1','A','Mumbai',98);
+
+create table loan_payment
+( loanno number(4) constraint myloanconstraint primary key,
+loan_status varchar2(10) constraint loanstatuscons check(loan_status=upper(loan_status)),
+loan_amount number(10) not null,
+update_date date default sysdate,
+product_key varchar2(5)
+);
+
+insert into loan_payment values(1,'APPROVED',8000,date'2018-07-16','P001');
