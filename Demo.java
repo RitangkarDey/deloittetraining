@@ -1,18 +1,19 @@
+package iodemos;
+import java.util.*;
+import java.io.*;
+public class Demo {
 
-public class Demo 
-{
-	public int addnum(int a,int b)
+	public static void main(String[] args) throws IOException
 	{
-		return a+b;
-	}
-	public static void main(String[] args) 
-	{
-		Demo d= new Demo();
-		int sum=0;
-		sum+=d.addnum(12, 15);
-		sum+=d.addnum(3, 4);
-		sum+=d.addnum(8, 21);
-		System.out.println(sum);
+		InputStream stream=new FileInputStream("c:\\Assign\\config.properties");
+		Properties properties=new Properties();
+		properties.load(stream);
+		String username=properties.getProperty("username");
+		String password=properties.getProperty("password");
+		System.out.println("Username :"+username);
+		System.out.println("Password :"+password);
+		stream.close();
 
 	}
+
 }

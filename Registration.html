@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Customer Details Please</h1>
+<form name="CustomerForm" method="get" action="Products.html">
+<table>
+
+<tr><td>Customer ID:<td/><td><input type="text" name="CustomerID"></td></tr>
+<tr><td>Customer Name:<td/><td><input type="text" name="CustomerName"></td></tr>
+<tr><td>Customer Address:<td/><td><input type="text" name="CustomerAddress"></td></tr>
+<tr><td>Bill Amount:<td/><td><input type="text" name="BillAmount"></td></tr>
+
+<tr>
+<td>
+Gender:
+</td>
+<td><input type="radio" name="gender" value="male">Male
+	<input type="radio" name="gender" value="female">Female
+	<input type="radio" name="gender" value="others">Female</td></tr>
+
+<tr>
+<td>
+Interested in:
+</td>
+<td>
+<input type="Checkbox" name="interest" value="Shirts">Shirts
+<input type="Checkbox" name="interest" value="Socks">Socks
+<input type="Checkbox" name="interest" value="Shoes">Shoes
+<input type="Checkbox" name="interest" value="Accessories">Accessories
+<input type="Checkbox" name="interest" value="Belt">Belt</td></tr>
+
+<tr>
+<td>
+From City:
+</td>
+<td>
+<select name="City">
+	<option value="Bangalore">Bangalore</option>
+	<option value="Hyderabad">Hyderabad</option>
+	<option value="Kolkata">Kolkata</option>
+	<option value="Chennai">Chennai</option>
+	<option value="Mumbai">Mumbai</option>
+	</select></td></tr>
+
+
+<tr><td><input type="Submit" value="Save">
+		<input type="reset" value="Clear"></td></tr>
+</table>
+</form>
+<a href="Products.html">Products</a>
+</body>
+</html>
